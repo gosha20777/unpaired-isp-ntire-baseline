@@ -64,5 +64,6 @@ def show_image(img_tensor, title="Image"):
     image_pil.save(f"{title}.jpg")
 
 def save_images(batch_idx, img_list, img_names, batch = False):
-    for _ in range(len(img_list)):
-        show_image(img_list[_][0], title=f"images/{batch_idx if batch == True else ''}_{img_names[_]}")
+    if batch_idx % 100 == 0:
+        for _ in range(len(img_list)):
+            show_image(img_list[_][0], title=f"images/{batch_idx if batch == True else ''}_{img_names[_]}")

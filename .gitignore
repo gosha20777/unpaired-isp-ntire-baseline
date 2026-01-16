@@ -177,3 +177,8 @@ experiments/
 debug.ipynb
 
 *.pth
+runs/
+images/
+data/
+data
+checkpoint/

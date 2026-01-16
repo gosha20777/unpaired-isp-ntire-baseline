@@ -1,7 +1,7 @@
 import torch
 from models import BaselineModel
 import models
-from load_dataset import get_dataloader
+from load_dataset_ntire import get_dataloader
 from losses.vgg_loss import VGGFromMAT
 from helper import save_baseline, train_baseline, train_disc
 from utils import *

@@ -2,10 +2,10 @@ from easydict import EasyDict
 
 config = EasyDict()
 
-config.path_input = "../raw_images/train/mediatek_raw"
-config.path_output = "../raw_images/train/fujifilm"
-config.vgg_path = "../../vgg_pretrained/imagenet-vgg-verydeep-19.mat"
-config.pretrained_path = "checkpoint/pretrained_20000.pth"
+config.path_input = "data/train/raws"
+config.path_output = "data/train/jpegs"
+config.vgg_path = "checkpoint/vgg_pretrained/imagenet-vgg-verydeep-19.mat"
+config.pretrained_path = ""
 config.color_loss_type = "mse"
 config.content_loss_type = 2
 config.texture_loss_type = "relativistic"
@@ -20,7 +20,7 @@ config.w_texture = 1.0
 config.w_dists = 1.0
 config.w_lpips_plus = 1.0
 config.chunks_count = 5000
-config.batch_size = 32
+config.batch_size = 16
 config.num_batches = 100
 config.chunks_size = 3200
 config.gen_lr = 5e-4
@@ -52,7 +52,7 @@ config.discriminators = {
         "w_loss" : 1.0 * config.w_texture_factor,
         "channels" : 1
     },
-"5": {
+    "5": {
         "name": "ViTDiscriminator",
         "info": "ViT",
         "layer_id": -1,

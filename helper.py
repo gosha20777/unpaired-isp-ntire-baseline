@@ -19,7 +19,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 def save_baseline(model, batch_idx, chunk_idx, generated):
 
-    if batch_idx % 10 == 0:
+    if batch_idx % 100 == 0:
         save_path = f"output/baseline_model_{chunk_idx * 100 + batch_idx}.pth"
         torch.save(model.state_dict(), save_path)
         print(f"Model saved to {save_path}")
