@@ -53,7 +53,13 @@ The provided baseline is based on the paper **"Learned Lightweight Smartphone IS
 
 ## 💻 Usage
 
-### 1. Inference (Generating Results)
+### 2. Pre-trained model
+
+The model is available here:
+
+- https://github.com/gosha20777/unpaired-isp-ntire-baseline/releases/tag/1.0.0
+
+### 2. Inference (Generating Results)
 
 To generate RGB images from RAW inputs using a trained model (or the baseline), use the `predict.py` script. This is the standard format for submission.
 
@@ -69,7 +75,7 @@ python predict.py --input_dir data/test/raws --output_dir submission/
 
 ```
 
-### 2. Training (Reproducing the Baseline)
+### 3. Training (Reproducing the Baseline)
 
 If you wish to retrain the baseline or experiment with the architecture:
 
